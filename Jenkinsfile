@@ -48,7 +48,8 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts "${env.BUILD_ID}/sources/dist/add2vals" 
+                    #archiveArtifacts "${env.BUILD_ID}/sources/dist/add2vals" 
+                    archiveArtifacts 'dist/add2vals'
                 }
             }
         }
