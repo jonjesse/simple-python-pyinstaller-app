@@ -41,10 +41,10 @@ pipeline {
                   IMAGE = 'cdrx/pyinstaller-linux:python2'
               }
             steps {
-                dir(path: env.BUILD_ID) { 
+                //dir(path: env.BUILD_ID) { 
                     unstash(name: 'compiled-results') 
                     sh 'pyinstaller -F sources/add2vals.py'
-                }
+                //}
             }
             post {
                 success {
